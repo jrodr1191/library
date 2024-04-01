@@ -1,0 +1,107 @@
+@font-face {
+    font-family: forest;
+    src: url(./Tomeoftheunknown-3gL3.ttf);
+}
+
+:root {
+    --light-green: #ddffd0;
+    --fade-green: #c3ffab;
+    --med-green: #80c465;
+    --oak: #643900;
+    --wood: #c79a75;
+    --light-wood: #fae2cf;
+}
+
+* {
+    margin: 0;
+    font-family: forest;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--light-green);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 56px;
+    background-color: var(--fade-green);
+    border-bottom: 2px solid var(--med-green);
+    height: 200px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    justify-items: center;
+    gap: 40px;
+    padding: 24px;
+    border: 6px solid var(--oak);
+    background-color: var(--wood);
+}
+
+.books {
+    border: 2px solid var(--oak);
+    background-color: var(--light-wood);
+    width: 100%;
+    min-height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.toggleRead,
+.remove {
+    border: transparent;
+    background-color: #fd8a8a;
+    padding: 6px 24px;
+}
+
+.read {
+    background-color: var(--med-green);
+}
+
+.books > button {
+    font-size: 2rem;
+}
+
+.books > * {
+    margin: 16px 24px;
+}
+
+.openModal {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 24px;
+}
+
+.openModal > button {
+    width: 300px;
+    height: 70px;
+    font-size: 2rem;
+}
+
+dialog {
+    text-align: center;
+    background-color: var(--light-green);
+    position: sticky;
+    left: 41%;
+    bottom: 30%;
+    width: 350px;
+    height: 350px;
+}
+
+form,
+form > button {
+    font-size: 1.6rem;
+}
+
+form input {
+    margin-bottom: 12px;
+}
+
